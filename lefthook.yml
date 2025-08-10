@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      run: ./mvnw spotless:apply
+
+pre-push:
+  commands:
+    tests:
+      run: ./mvnw test
+    check-code-format:
+      run: mvn spotless:check
