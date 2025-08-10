@@ -1,16 +1,13 @@
 package com.logisticapp.backend_logistic_app.infrastructure.adepter.out.persistence.adapter;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-
-import org.springframework.stereotype.Component;
-
 import com.logisticapp.backend_logistic_app.domain.model.MaritimeShipment;
 import com.logisticapp.backend_logistic_app.domain.port.out.SaveMaritimeShipmentPort;
 import com.logisticapp.backend_logistic_app.infrastructure.adepter.out.persistence.repository.SpringDataMaritimeShipmentRepository;
-
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor

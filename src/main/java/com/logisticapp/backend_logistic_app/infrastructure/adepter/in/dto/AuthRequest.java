@@ -7,6 +7,7 @@ import lombok.Data;
 public class AuthRequest {
     @Schema(description = "User to access", example = "admin")
     private String username;
+
     @Schema(description = "Password to access", example = "password")
     private String password;
 }

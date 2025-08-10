@@ -14,21 +14,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @OpenAPIDefinition(
-        info = @Info(
-                title = "API de Logística",
-                version = "${api.version}",
-                license = @License(
-                        name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"
-                ),
-                description = "API para gestión de envíos logísticos"
-        )
-)
-@SecurityScheme(
-        name = "Bearer Authentication",
-        type = SecuritySchemeType.HTTP,
-        bearerFormat = "JWT",
-        scheme = "bearer"
-)
+        info =
+                @Info(
+                        title = "API de Logística",
+                        version = "${api.version}",
+                        license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"),
+                        description = "API para gestión de envíos logísticos"))
+@SecurityScheme(name = "Bearer Authentication", type = SecuritySchemeType.HTTP, bearerFormat = "JWT", scheme = "bearer")
 public class OpenAPIConfig {
 
     @Bean
@@ -37,7 +29,8 @@ public class OpenAPIConfig {
         return new OpenAPI()
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
-                        .addSecuritySchemes(securitySchemeName,
+                        .addSecuritySchemes(
+                                securitySchemeName,
                                 new io.swagger.v3.oas.models.security.SecurityScheme()
                                         .name(securitySchemeName)
                                         .type(Type.HTTP)

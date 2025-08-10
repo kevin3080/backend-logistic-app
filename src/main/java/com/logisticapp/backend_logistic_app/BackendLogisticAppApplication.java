@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BackendLogisticAppApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BackendLogisticAppApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(BackendLogisticAppApplication.class, args);
+    }
 }

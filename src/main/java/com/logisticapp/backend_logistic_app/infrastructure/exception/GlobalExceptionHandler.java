@@ -2,7 +2,6 @@ package com.logisticapp.backend_logistic_app.infrastructure.exception;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -26,7 +25,8 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(DuplicateGuideNumberException.class)
-    public ResponseEntity<String> handleDuplicateGuideNumberException(DuplicateGuideNumberException ex, WebRequest request) {
+    public ResponseEntity<String> handleDuplicateGuideNumberException(
+            DuplicateGuideNumberException ex, WebRequest request) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY); // 422
     }
 
@@ -48,6 +48,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleGlobalException(Exception ex, WebRequest request) {
-        return new ResponseEntity<>("An unexpected error occurred: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR); // 500
+        return new ResponseEntity<>(
+                "An unexpected error occurred: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR); // 500
     }
 }

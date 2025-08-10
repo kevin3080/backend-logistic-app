@@ -1,15 +1,12 @@
 package com.logisticapp.backend_logistic_app.infrastructure.adepter.out.persistence.adapter;
 
+import com.logisticapp.backend_logistic_app.domain.model.Product;
+import com.logisticapp.backend_logistic_app.infrastructure.adepter.out.persistence.repository.SpringDataProductRepository;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
-import org.springframework.stereotype.Component;
-
-import com.logisticapp.backend_logistic_app.domain.model.Product;
-import com.logisticapp.backend_logistic_app.infrastructure.adepter.out.persistence.repository.SpringDataProductRepository;
-
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
